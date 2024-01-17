@@ -1,7 +1,0 @@
-
-
-# node module file
-node_modules/*
-
-# env file
-.env
