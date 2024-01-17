@@ -14,7 +14,7 @@ dotenv.config();
 // cors
 app.use(
   cors({
-    origin: ["http://localhost:3000"],
+    origin: ["http://localhost:3000", "https://yousef-ahmed.vercel.app"],
   })
 );
 
