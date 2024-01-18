@@ -56,7 +56,9 @@ const createProjectController = expressAsyncHandler(async (req, res) => {
  * @access private (anyone)
  -------------------------------------*/
 const getAllProjectsController = expressAsyncHandler(async (req, res) => {
-  const projects = await Projects.find({}).select("-__v");
+  const projects = await Projects.find({})
+    .select("-__v")
+    .sort({ createdAt: -1 });
   res.status(200).json({ ok: true, projects });
 });
 
